@@ -1,12 +1,27 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
-const List = () => {
-  const fruits = ['apple','banana','pinapple','coconuts'];
-  fruits.sort()
-  const listItems=fruits.map(fruit=> <li>{fruit}</li>)
+const List = (props) => {
+  const itemList = props.items;
+  const category= props.category;
+  const listItems = itemList.map(item=>
+                                    <li key={item.id}>{item.name} &nbsp; <b>{item.calories}</b></li>
+                                )
   return (
-    <ol>{listItems}</ol>
+    <div>
+      <h2 className='list-category'>{category}</h2>
+      <ol className='list-items'> {listItems}</ol>
+    </div>
   )
 }
+List.propTypes={
+  category:PropTypes.string,
+  items:PropTypes.arrayOf(PropTypes.shape({id:PropTypes.number,
+                                          name:PropTypes.string,
+                                          calories:PropTypes.number
+  }))
 
-export default List 
+}
+
+export default List
+>>>>>>> a0906bda31ef0c8c2b3e1f546eb4188b442b3d7d
