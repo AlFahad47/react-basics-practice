@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const List = (props) => {
   const itemList = props.items;
@@ -12,6 +13,14 @@ const List = (props) => {
       <ol className='list-items'> {listItems}</ol>
     </div>
   )
+}
+List.propTypes={
+  category:PropTypes.string,
+  items:PropTypes.arrayOf(PropTypes.shape({id:PropTypes.number,
+                                          name:PropTypes.string,
+                                          calories:PropTypes.number
+  }))
+
 }
 
 export default List
