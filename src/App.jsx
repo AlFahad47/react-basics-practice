@@ -6,10 +6,11 @@ import Student from './Student'
 import UserGreeting from './UserGreeting'
 import List from './List'
 import MyClick from './MyClick'
+import Counter from './Counter'
 function App() {
   const fruits = [
     {id:1,name:"Banana",calories:192},
-    {id:2,name:"Apple",calories:160},
+    {id:2,name:"Apple",calories:160},   
     {id:3,name:"Orange",calories:102},
     {id:4,name:"Pineapple",calories:148},
   ];
@@ -36,7 +37,8 @@ function App() {
     { gagets.length > 0 &&     <List  items={gagets} category="Gagets"/> }
      */}
 
-      <MyClick/>
+      {/* <MyClick/> */}
+     <Counter/> 
 
     </>
   );
