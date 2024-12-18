@@ -24,4 +24,3 @@ List.propTypes={
 }
 
 export default List
->>>>>>> a0906bda31ef0c8c2b3e1f546eb4188b442b3d7d
