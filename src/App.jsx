@@ -7,6 +7,7 @@ import UserGreeting from './UserGreeting'
 import List from './List'
 import MyClick from './MyClick'
 import Counter from './Counter'
+import MyOnChangeComponent from './MyOnChangeComponent'
 function App() {
   const fruits = [
     {id:1,name:"Banana",calories:192},
@@ -38,7 +39,8 @@ function App() {
      */}
 
       {/* <MyClick/> */}
-     <Counter/> 
+     {/* <Counter/>  */}
+     <MyOnChangeComponent/>
 
     </>
   );
